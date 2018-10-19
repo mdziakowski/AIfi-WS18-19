@@ -14,6 +14,7 @@ public class Calculator {
 		
 		System.out.println(a + b + " ist die Lösung");
 		System.out.println("Lösung: " + a + b);
+		System.out.println("Lösung: " + (a + b));
 		
 	}
 
