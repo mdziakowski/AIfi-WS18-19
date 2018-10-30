@@ -12,9 +12,9 @@ public class Calculator {
 		System.out.println(a + " + " + b + " = " + sum);
 		System.out.println(a + " - " + b + " = " + diff);
 		
-		System.out.println(a + b + " ist die Lösung");
-		System.out.println("Lösung: " + a + b);
-		System.out.println("Lösung: " + (a + b));
+		System.out.println(a + b + " ist die LÃ¶sung");
+		System.out.println("LÃ¶sung: " + a + b);
+		System.out.println("LÃ¶sung: " + (a + b));
 		
 	}
 
