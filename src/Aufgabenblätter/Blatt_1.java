@@ -4,7 +4,7 @@ public class Blatt_1 {
 
 	public static void main(String[] args) {
 
-		double a = 10;
+		double a = 101;
 		double x_0 = a / 2;
 		double x_1 = (x_0 + (a / x_0)) / (2);
 
