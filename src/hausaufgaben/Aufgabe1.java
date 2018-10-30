@@ -3,7 +3,7 @@ package hausaufgaben;
 public class Aufgabe1 {
 	public static void main(String[] args) {
 		
-		double a = 16;
+		double a = 277;
 		double x0 = a/2;
 		double x1 = a;
 		int i = 1; 
@@ -18,7 +18,8 @@ public class Aufgabe1 {
            
         }while(Math.abs(x1-x0) > 0.0001); 
 		
-		System.out.println("Die Wurzel von a = " + a + " ist " + x1);
+		System.out.println("Die Wurzel von a = " + a + " ist ungefähr " + x1);
+		System.out.println("Test mit java Methode Math.sqrt(a) = " + Math.sqrt(a));
 
 	}
 
