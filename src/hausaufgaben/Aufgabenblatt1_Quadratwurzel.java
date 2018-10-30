@@ -1,4 +1,4 @@
-package einfach;
+package hausaufgaben;
 
 /**
  *
