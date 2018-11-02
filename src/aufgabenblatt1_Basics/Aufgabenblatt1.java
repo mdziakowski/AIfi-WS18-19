@@ -4,7 +4,7 @@ public class Aufgabenblatt1 {
 	
 	public static void main(String[] args) {
 		
-		double a = 16;
+		double a = 49;
 		double xi = a/2;
 		double xialt = 0;
 		int i = 1;
@@ -21,4 +21,7 @@ public class Aufgabenblatt1 {
 		 return (xo + a/xo)/2;
 	}
 
+	// funktioniert bei allen Zahlen größer 4, bei Zahlen kleiner 4 wird xi > xialt  und es erfolgt nur eine Beschnung
+	// gute Auslagerung der Methode, schön ordentlicher Code
+	
 }
