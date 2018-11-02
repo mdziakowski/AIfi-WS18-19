@@ -13,6 +13,9 @@ public class WurzelBrechnen {
 				break;
 		}
 		
+		// funktioniert einwandfrei, gute verwendung von break
+		// bitte auf die Formatierung achten (Tastenkombination strg + shift + f, hilft oft), gibt in der HA auch Punkte dafür
+				
 	}
 }
 }
