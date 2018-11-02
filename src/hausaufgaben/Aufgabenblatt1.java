@@ -15,7 +15,7 @@ public class Aufgabenblatt1 {
 		
 		// funktioniert bei allen Zahlen größer 4 einwandfrei
 		// bei kleineren zahlen wird dein x0-x1 negativ
-		// bitte auf die Formatierung achten(Tastenkombination strg + shift + f)
+		// bitte auf die Formatierung achten (Tastenkombination strg + shift + f, hilft oft), gibt in der HA auch Punkte dafür
 
 	}
 
