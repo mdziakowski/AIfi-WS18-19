@@ -4,7 +4,7 @@ public class Aufgabenblatt1 {
 	
 	public static void main(String[] args) {
 		
-		double a = 49;
+		double a = 3;
 		double xi = a/2;
 		double xialt = 0;
 		int i = 1;
@@ -14,7 +14,7 @@ public class Aufgabenblatt1 {
 			System.out.println("Approximation Nr." + i + ": " + xi);
 			xi = formel(a, xi);
 			i++;
-		} while( xialt - xi > 0.0001); 
+		} while( Math.abs(xialt - xi) > 0.0001); 
 	}
 	
 	public static double formel(double a, double xo) {
