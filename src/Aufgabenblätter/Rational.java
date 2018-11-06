@@ -21,7 +21,7 @@ public class Rational {
 	public void setNenner(int i) {
 
 		this.nenner = i;
-
+// Test
 	}
 
 	public void setZaehler(int i) {
