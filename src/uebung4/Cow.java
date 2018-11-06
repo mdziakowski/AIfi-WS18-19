@@ -4,7 +4,7 @@ public class Cow {
 	
 	private String cowname;
 	private static int cowCounter = 0;
-	private boolean hungry = true;
+	public boolean hungry = true;
 
 	public Cow (String name) {
 		cowname = name;
@@ -18,5 +18,18 @@ public class Cow {
 	public static int getCowCount() {
 		return cowCounter;
 	}
+	
+	public void toogle(){
+		
+		this.hungry = !this.hungry;
+	}
+
+	public boolean isHungry() {
+		return this.hungry;
+	}
+
+
+	
 
 }
+
