@@ -69,7 +69,7 @@ class Rational {
 	public void add(Rational r1) {
 		this.kommazahl=this.kommazahl + ((double)r1.zaehler/(double)r1.nenner);
 		System.out.println("Das neue Rational ist: " + this);
-		// Wie kann ich hier das aktuelle ImmutableRational ausgeben, zu dem ich ein neues addiert habe?
+		// Wie kann ich hier das aktuelle Rational ausgeben, zu dem ich ein neues addiert habe?
 	}
 
 }
