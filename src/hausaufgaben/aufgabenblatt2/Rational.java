@@ -1,55 +1,24 @@
 package hausaufgaben.aufgabenblatt2;
 
 class Rational {
-	int zaehler;
+
 	int nenner;
+	int zaehler;
+	double kommazahl;
 	
-	/////////////////////////Konstruktoren
-	public Rational() {
-		zaehler=0;
-		nenner=1;
-	}
-	public Rational(int nenner, int zaehler) {
-		this.zaehler=zaehler;
+	Rational(int zaehler, int nenner) {
 		this.nenner=nenner;
+		this.zaehler=zaehler;
+		this.kommazahl=(double)nenner/(double)zaehler;
+	}
+	Rational(){
+		this.nenner=1;
+		this.zaehler=0;
+		kommazahl=0;
 	}
 	
-	///////////////////////Main
-	public static void main (String args[]) {
-		System.out.println("Erste rationale Zahl");
-		Rational zahl1 = new Rational();
-		zahl1.printRational();
-		zahl1.setNenner(123);
-		zahl1.setZaehler(12	);
-		zahl1.printRational();
-		
-		System.out.println("\nZweite rationale Zahl");
-		Rational zahl2 = new Rational(5,16);
-		zahl2.printRational();
-		
-		System.out.println("\nzahl2 negieren");
-		zahl2.negate();
-		zahl2.printRational();
-		
-		System.out.println("\nnegierte zahl2 invertieren");
-		zahl2.invert();
-		zahl2.printRational();
-		
-		System.out.println("\nzahl2 als double-Ausgabe");
-		double rational2 = zahl2.toDouble();
-		System.out.println(rational2);
-		
-		System.out.println("\nzahl3 Kürzen");
-		Rational zahl3 = new Rational(400,600);
-		Rational reduziert = zahl3.reduce();
-	}
-
-	////////////////////Methoden	
-
-	public void printRational() {
-		double rational = zaehler/nenner;
-		System.out.println("Der Zähler beträgt: "+ zaehler +" der Nenner: " + nenner);
-		System.out.println("Die rationale Zahl ist: " + rational);
+	public static void main(String[] args) {
+	
 	}
 	
 	public  void setZaehler(int zaehler) {
@@ -60,21 +29,28 @@ class Rational {
 		this.nenner=nenner;
 	}
 	
+	public void printRational() {
+		double rational = (double)zaehler/nenner;
+		System.out.println("Der Zähler beträgt: "+ zaehler +" der Nenner: " + nenner);
+		System.out.println("Die rationale Zahl ist: " + rational);
+	}
+
+	
 	public void negate() {
-		nenner=nenner*(-1);
-		zaehler=zaehler*(-1);
+		this.nenner=this.nenner*(-1);
+		this.zaehler=this.zaehler*(-1);
 	}
 	
 	public void invert() {
-		int zaehler_alt = zaehler;
-		int nenner_alt = nenner;
-		zaehler = nenner_alt;
-		nenner = zaehler_alt;
+		int zaehler_alt = this.zaehler;
+		int nenner_alt = this.nenner;
+		this.zaehler = nenner_alt;
+		this.nenner = zaehler_alt;
 	}
 	
-	public double toDouble() {
-		double rational_d = zaehler/nenner;
-		return rational_d;
+	public void toDouble() {
+		this.kommazahl=(double)zaehler/(double)nenner;
+		System.out.println("Die rationale Zahl beträgt: " + this.kommazahl);
 	}
 	
 	public static int ggT (int number1, int number2) {
@@ -84,11 +60,16 @@ class Rational {
 		return ggT(number2,number1%number2);
 	}
 	
-	public Rational reduce() {
+	public void reduce() {
 		int ggt = ggT(this.zaehler, this.nenner);
-		Rational gekuerzt = new Rational(this.zaehler/ggt,this.nenner/ggt);
-		gekuerzt.printRational();
-		return gekuerzt;
+		this.zaehler=this.zaehler/ggt;
+		this.nenner=this.nenner/ggt;
 	}
 	
+	public void add(Rational r1) {
+		this.kommazahl=this.kommazahl + ((double)r1.zaehler/(double)r1.nenner);
+		System.out.println("Das neue Rational ist: " + this);
+		// Wie kann ich hier das aktuelle ImmutableRational ausgeben, zu dem ich ein neues addiert habe?
+	}
+
 }
