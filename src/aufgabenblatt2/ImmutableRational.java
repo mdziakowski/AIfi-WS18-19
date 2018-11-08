@@ -57,11 +57,10 @@ class ImmutableRational {
 	
 	private static int ggT(int a, int b) {
 		if (a > b) {
-			
-			int merke = b;
+
 			for (int ii = b; ii > 0; ii--) {
 				
-				if (a % ii == 0 && merke % ii ==0) {
+				if (a % ii == 0 && b % ii ==0) {
 					b = ii;
 					break;
 				}
@@ -72,8 +71,7 @@ class ImmutableRational {
 			
 			for (int ii = a; ii > 0; ii--) {
 				
-				int merke = a;
-				if (b % ii == 0 &&  merke % ii == 0) {
+				if (b % ii == 0 &&  a % ii == 0) {
 					a = ii;
 					break;
 				}

@@ -47,8 +47,7 @@ class Rational {
 		int zählerNeu;
 		
 		if (nenner == zähler) {
-			nennerNeu = 1;
-			zählerNeu = 1;
+			return new Rational(1,1);
 		}
 			nennerNeu = nenner / ggT(nenner, zähler);
 			zählerNeu = zähler / ggT(nenner, zähler);

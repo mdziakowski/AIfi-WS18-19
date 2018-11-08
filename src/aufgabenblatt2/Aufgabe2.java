@@ -7,8 +7,8 @@ class Aufgabe2 {
 		
 		rat.printRational();
 		
-		rat.setZähler(9);
-		rat.setNenner(27);		
+		rat.setZähler(32);
+		rat.setNenner(4);		
 		
 		rat.printRational();
 		
@@ -25,7 +25,8 @@ class Aufgabe2 {
 		ret.printRational();
 		rat.printRational();
 		
-		ImmutableRational immu = new ImmutableRational(6,8);
+		ImmutableRational immu = new ImmutableRational(8,8);
+		immu.printRational();
 		immu.reduce();
 		immu.printRational();
 	}
