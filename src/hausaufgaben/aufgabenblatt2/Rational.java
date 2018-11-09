@@ -18,7 +18,7 @@ class Rational {
 	}
 	
 	public static void main(String[] args) {
-	
+		
 	}
 	
 	public  void setZaehler(int zaehler) {
@@ -70,6 +70,7 @@ class Rational {
 		this.kommazahl=this.kommazahl + ((double)r1.zaehler/(double)r1.nenner);
 		System.out.println("Das neue Rational ist: " + this);
 		// Wie kann ich hier das aktuelle Rational ausgeben, zu dem ich ein neues addiert habe?
+		// Wenn du nur die Zahl haben willst, kannst du this.kommazahl nehmen
 	}
 
 }

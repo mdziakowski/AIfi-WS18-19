@@ -20,8 +20,6 @@ class ImmutableRational {
 	///////////////////////Main
 	public static void main (String args[]) {
 		
-		
-		
 	}
 
 	////////////////////Methoden	

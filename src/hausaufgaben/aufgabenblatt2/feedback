@@ -1,0 +1,5 @@
+Wie kann ich hier das aktuelle Rational ausgeben, zu dem ich ein neues addiert habe?
+	Wenn du nur die Zahl haben willst, kannst du this.kommazahl nehmen
+
+funktioniert gut, ggT musss nicht static sein(schön, dass du überhaupt eine benutz hast) und bitte auf die access modifiers achten,
+sonst bringen dir die set und ggf. get Methoden nichts
