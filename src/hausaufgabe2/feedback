@@ -1,0 +1,12 @@
+funtioniert sehr gut
+
+gute Verwendung der access modifiers, gut auskommentiert gute Übersichtlichkeit
+
+Tipp: wenn du bei den ImutableRationaleZahlen ein neues Objekt von Typ ImutableRationaleZahlen zurückgibst
+	und du schon weißt, dass du nichts weiter mit dem Objekt machen möchtest, außer eine Methode aufzurufen, kannst
+	du es auch machen, ohne dem Objekt eine Referenzvariablen zuzuweisen.
+
+	Bsp.: ImutableRational negativ = zahl1.negate();  
+			negativ.printImutableRational();
+			
+			---> zahl1.negate().printImutableRational();
