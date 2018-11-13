@@ -23,6 +23,7 @@ public class Farm {
 		Calf kalb1 = cow1.giveBirth("Jana");
 		
 		System.out.println(kalb1.getName());
+		System.out.println(Cow.cowCounter);
 
 	}
 

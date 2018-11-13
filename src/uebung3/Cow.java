@@ -8,7 +8,7 @@ public class Cow {
 	
 	Cow (String name){
 		this.name=name;
-		this.cowCounter++;
+		Cow.cowCounter++;
 	}
 
 	public static void main(String[] args) {
