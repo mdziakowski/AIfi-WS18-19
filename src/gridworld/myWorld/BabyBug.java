@@ -11,26 +11,67 @@ import gridworld.framework.grid.Location;
 
 
 public class BabyBug extends DBug {
+	int eatenFlowers = 0;
 	
 	BabyBug (Color bbugColor){
-		super(bbugColor);
+		super(Color.yellow);
 		
 	}
 	
-	
-	public void moveTo(){
-		if (neighbor instanceof Flower){
-			System.out.println("Flower");
+	 @Override
+     public void act()
+     {
+         if (canMove()) {
+        	 countEatenFlowers();
+        	 move();
+        	 growUp();
+         	}
+         else
+             turn();
+     }
+
+	public void countEatenFlowers() {
+		Grid<Actor> gr = getGrid();
+		if (gr != null) {
+		Location loc = getLocation();
+		Location next = loc.getAdjacentLocation(getDirection());
+		Actor neighbor = gr.get(next);
+		if (neighbor instanceof Flower) {
+			this.eatenFlowers++;
 		}
-		super.moveTo();
+     	}
 	}
-	
-	// Location zu der gelaufen wird rauskriegen
-	// eigene Methode erstellen die Flower Removed
-	// Methode in act aufrufen
-	
-	
 
+	public void growUp() {
+		if (eatenFlowers == 3) {
+			Grid<Actor> gr = getGrid();
+			if (gr != null) {
+			Location loc = getLocation();
+			Location next = loc.getAdjacentLocation(getDirection());
+			DBug dbugnew = new DBug(Color.black);
+			
+			this.removeSelfFromGrid();
+			}
+		}
+		
+	}
+	 
+	 @Override
+	 public void move()
+	    {
+	        Grid<Actor> gr = getGrid();
+	        if (gr == null)
+	            return;
+	        Location loc = getLocation();
+	        Location next = loc.getAdjacentLocation(getDirection());
+	        if (gr.isValid(next))
+	            moveTo(next);
+	        else
+	            removeSelfFromGrid();
+	    }
 	
-
+	
+//	public void removeFlower(){
+//		
+//	}
 }
