@@ -49,7 +49,7 @@ public class BabyBug extends DBug {
 			Location loc = getLocation();
 			Location next = loc.getAdjacentLocation(getDirection());
 			DBug dbugnew = new DBug(Color.black);
-			
+			dbugnew.putSelfInGrid(gr, loc);
 			this.removeSelfFromGrid();
 			}
 		}
