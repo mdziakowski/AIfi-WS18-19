@@ -49,8 +49,12 @@ public class BabyBug extends DBug {
 			Location loc = getLocation();
 			Location next = loc.getAdjacentLocation(getDirection());
 			DBug dbugnew = new DBug(Color.black);
-			dbugnew.putSelfInGrid(gr, loc);
+//			dbugnew.putSelfInGrid(gr, loc); hier überschreibst du den dein babybug und dann möchtest du diesen entfernen, da der babybug aber gar nicht mehr da ist kommt es zur Fehlermeldung 
+//			wenn du dir die zweite und dritte Zeile der Fehlermeldung anschaust und am ende auf Java.irgendwas(glaube dass es so aussieht) klickst zeigt er dir auch an wo der Fehler war
+//			java zeigt da einmal auf die removeSelfFromGrid Methode in der Actor Klasse und die Stelle wo du sie aufruft und der Fehler kommt
 			this.removeSelfFromGrid();
+			Breeder breeder = new Breeder();
+			breeder.putSelfInGrid(gr, loc);
 			}
 		}
 		

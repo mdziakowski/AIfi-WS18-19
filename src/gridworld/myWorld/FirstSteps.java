@@ -12,12 +12,12 @@ public class FirstSteps {
 		
 		 ActorWorld world1 = new ActorWorld ();
 		 DBug dbug1 = new DBug (Color.BLUE);
-		 world1.add(dbug1);
-		 
+//		 world1.add(dbug1);
+		 world1.add(new Breeder());
 		 BabyBug bbb1 = new BabyBug (Color.BLUE);
-		 world1.add(bbb1);
+//		 world1.add(bbb1);
 		 
-//		 Breeder breeder1 = new Breeder ();
+		 Breeder breeder1 = new Breeder ();
 //		 world1.add(breeder1);
 		 
 		 world1.add(new Rock());
@@ -26,6 +26,12 @@ public class FirstSteps {
 		 world1.add(new Rock());
 		
 //		 world1.add(new DBug()); // wieso geht das? ohne dem DBug einen Namen zu geben?
+//		 DBug dbug1 = new DBug (Color.BLUE); 
+//		 dbug1 ist nicht der Name, sondern eine Referenzvariable, die den Rückgabetyp des Konstrukors speichert, was ein Objekt der Klasse ist
+//		 die dir nur den Zugriff auf dein Objekt ermöglicht, du übergibst der world1 in beiden Fällen den Speicherort
+//		 des Objektes
+ 
+		 
 	     world1.show();
 		
 	}
