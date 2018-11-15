@@ -8,8 +8,8 @@ public class Run {
 
 	public static void main(String[] args) {
 		 ActorWorld world = new ActorWorld();
-		 Breeder breeder1 = new Breeder();
-		 world.add(breeder1);
+		 Breeder breeder1 = new Breeder(RED);
+		 // world.add(breeder1);
 		 world.show();
 	}
 }
