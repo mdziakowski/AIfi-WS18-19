@@ -9,21 +9,7 @@ import gridworld.framework.grid.Location;
 
 public class Breeder extends Bug {
 	
-	public Breeder() {
-		this.setColor(Color.RED);
-	}
-	
-	/* @Override
-    public void add(Actor occupant)
-    {
-        Location loc = getRandomEmptyLocation();
-        if (loc != null)
-            add(loc, occupant);
-    } */
 
-
-	
-	
 	
 
 }
