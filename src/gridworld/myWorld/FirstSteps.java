@@ -12,6 +12,8 @@ public class FirstSteps {
 		
 		 ActorWorld world1 = new ActorWorld ();
 		 DBug dbug1 = new DBug (Color.BLUE);
+		 Bug bug1 = new Bug();
+		 world1.add(bug1);
 //		 world1.add(dbug1);
 		 world1.add(new Breeder());
 		 BabyBug bbb1 = new BabyBug (Color.BLUE);
