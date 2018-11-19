@@ -1,63 +1,101 @@
-package uebung5;
+package ha3;
 
 import java.awt.Color;
-
 import gridworld.framework.actor.Actor;
 import gridworld.framework.actor.Flower;
 import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
 
-public class BabyBug extends Actor {
+public class Car extends Actor {
 
-	{
+	int speed;
+	int colCar;
+	int abstand;
 
-	public BabyBug()
-	    {
-	        setColor(Color.YELLOW);
-	    }
+	Car(int colCar) {
 
-	public BabyBug(Color bugColor)
-	    {
-	        setColor(bugColor);
-	    }
+		this.setColor(Color.BLACK);
+		this.speed = 5;
+		// this.speed = randInt(4, 6);
+		this.colCar = colCar;
 
-	public void act() {
-		if (canMove())
-			// move();
-		else
-			turn();
 	}
 
-	public void turn() {
-		setDirection(getDirection() + Location.HALF_RIGHT);
+	public void act() {
+
+		for (int i = 0; i < speed; i++) {
+
+			move();
+
+		}
+
+		beschleunigen();
+		troedeln();
+
+	}
+
+	public void beschleunigen() {
+
+		if (this.speed < 5) {
+
+			speed++;
+
+		}
+
+	}
+
+	public void troedeln() {
+
+		if (Math.random() <= 0.3) {
+
+			speed--;
+
+		}
+
 	}
 
 	public void move() {
+
 		Grid<Actor> gr = getGrid();
-		if (gr == null)
+
+		if (gr == null) {
+
 			return;
+
+		}
+
 		Location loc = getLocation();
 		Location next = loc.getAdjacentLocation(getDirection());
-		if (gr.isValid(next))
+
+		if (gr.isValid(next)) {
+
 			moveTo(next);
-		else
-			removeSelfFromGrid();
-		Flower flower = new Flower(getColor());
-		flower.putSelfInGrid(gr, loc);
+
+		}
+
 	}
 
 	public boolean canMove() {
+
 		Grid<Actor> gr = getGrid();
-		if (gr == null)
+
+		if (gr == null) {
+
 			return false;
+
+		}
 		Location loc = getLocation();
 		Location next = loc.getAdjacentLocation(getDirection());
-		if (!gr.isValid(next))
+
+		if (!gr.isValid(next)) {
+
 			return false;
+
+		}
+
 		Actor neighbor = gr.get(next);
 		return (neighbor == null) || (neighbor instanceof Flower);
-		// ok to move into empty location or onto flower
-		// not ok to move onto any other actor
+
 	}
 
 }
