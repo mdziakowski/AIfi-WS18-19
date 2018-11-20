@@ -8,7 +8,7 @@ public class Helicopter implements CanMoveHorizontally, CanMoveVertically{
 	private double directionInRadians = 0;
 	private double x, y, z;
 	
-	public Helicopter(String name, double x, double y) {
+	public Helicopter(String name, double x, double y, double z) {
 		this.name = name;
 		this.x = x;
 		this.y = y;

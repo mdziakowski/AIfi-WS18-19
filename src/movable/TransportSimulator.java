@@ -40,7 +40,7 @@ public class TransportSimulator {
 		TS1.simulate(100);
 		TransportSimulator TS2 = new TransportSimulator(new Ship("Schiff", 0, 0));
 		TS2.simulate(100);
-		TransportSimulator TS3 = new TransportSimulator(new Helicopter("Heli", 0, 0));
+		TransportSimulator TS3 = new TransportSimulator(new Helicopter("Heli", 0, 0, 0));
 		TS3.simulate(100);
 	}
 
