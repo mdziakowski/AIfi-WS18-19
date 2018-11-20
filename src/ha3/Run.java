@@ -1,3 +1,11 @@
+/* 
+ * Das Programm hat noch ein paar Fehler, Ich wusste nicht, wie man Objekte in einer
+ * for-Schleife erzeugen kann, sodass man über eine Variable den Anzahl der Zeilen
+ * angibt und über die for-Schleife dann genau so viele CarSource-Actors erzeugt.
+ * 
+ * Auch gibt es noch keine Funktion, damit Autos vor Hindernissen abbremsen.
+ */
+
 package ha3;
 
 import gridworld.framework.actor.ActorWorld;
