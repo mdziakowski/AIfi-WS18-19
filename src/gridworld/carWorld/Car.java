@@ -70,7 +70,6 @@ public class Car extends Actor {
 	public void dawdle() {
 		if ((Math.random()<=0.2) && (speed>0)) {
 			speed--;
-			System.out.println(speed);
 		}
 	}
 

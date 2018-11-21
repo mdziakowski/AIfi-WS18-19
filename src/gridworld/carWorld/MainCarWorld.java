@@ -12,7 +12,7 @@ public class MainCarWorld {
 	
 	public static void main (String args []) {
 		
-		BoundedGrid grid1 = new BoundedGrid(10,50);
+		BoundedGrid grid1 = new BoundedGrid(8,35);
 		ActorWorld world1 = new ActorWorld (grid1);
 		Car car1 = new Car();
 		Location loc1 = new Location(0,0);
@@ -42,14 +42,17 @@ public class MainCarWorld {
 		car6.putSelfInGrid(grid1, loc7);
 		
 		
+		CarSource cs1 = new CarSource();
+		Location loc8 = new Location(6,0);
+		cs1.putSelfInGrid(grid1, loc8);
+		
+		
 		world1.show();
 		
 	}
 
 }
-// ToDo:
-// Error bei Rausfahren lösen
-// CarSource erstellen
+
 
 
 
@@ -58,7 +61,9 @@ public class MainCarWorld {
 // Wieso gibt es eine Klasse World und eine Klasse Actorworld?
 
 // Wieso dreht sich mein Auto-GIF?
-// Wieso wird das Bild des Auto komisch angezeigt?
-// Soll Auto den Stein iwann wegmachen?
+// Wieso wird das Bild des Auto komisch angezeigt? (nicht das GIF, dass ich erstellt hatte)
+// Soll das Auto den Stein irgendwann wegmachen?
+
+// Wieso bewegt sich mein Auto aus der CarSource nicht?
 
 // Was bedeuten die Warnungen: The expression of type BoundedGrid needs unchecked conversion to conform to Grid<Actor>
