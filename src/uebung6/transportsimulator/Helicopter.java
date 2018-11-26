@@ -51,7 +51,7 @@ public class Helicopter implements CanMoveVertically, CanMoveHorizontally {
 		}
 	
 	public String toString() {
-		return ("Helicopter " + name + "x= " + Math.round(x) + " y= " + Math.round(y) + " z= " + Math.round(z));
+		return ("Helicopter " + name + " x= " + Math.round(x) + " y= " + Math.round(y) + " z= " + Math.round(z) + ".");
 	}
 	
 
