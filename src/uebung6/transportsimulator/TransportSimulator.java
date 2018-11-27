@@ -2,7 +2,7 @@ package uebung6.transportsimulator;
 
 public class TransportSimulator {
 	
-	private Movable movable;
+	Movable movable;
 
 	TransportSimulator(Movable movable){
 		this.movable = movable;
@@ -15,7 +15,8 @@ public class TransportSimulator {
 		
 		//elevator1.simulate(12);
 		//ship1.simulate(12);
-		helicopter1.simulate(1);
+		//helicopter1.simulate(1);
+	
 
 	}
 	
