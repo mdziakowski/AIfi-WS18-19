@@ -13,21 +13,24 @@ public class TransportSimulator {
 		TransportSimulator ship1 = new TransportSimulator(new Ship("Ship 1", 0, 0));
 		TransportSimulator helicopter1 = new TransportSimulator (new Helicopter("Helicopter 1", 0,0,0));
 		
-		elevator1.simulate(12);
-		ship1.simulate(12);
-		helicopter1.simulate(12);
+		//elevator1.simulate(12);
+		//ship1.simulate(12);
+		helicopter1.simulate(1);
 
 	}
 	
 	private void increaseSpeedByRandom() {
 		if ( movable instanceof CanMoveHorizontally) {
-			CanMoveHorizontally horizMovingM = (CanMoveHorizontally) movable;
-			horizMovingM.increaseHorizontalSpeed(Math.random()*100);
+			//CanMoveHorizontally horizMovingM = (CanMoveHorizontally) movable;
+			//horizMovingM.increaseHorizontalSpeed(Math.random()*100);
+			((CanMoveHorizontally) movable).increaseHorizontalSpeed(Math.random()*100);
 		}
 		
 		if ( movable instanceof CanMoveVertically) {
-			CanMoveVertically verticMovingM = (CanMoveVertically) movable;
-			verticMovingM.increaseVerticalSpeed(Math.random()*10-5);
+			//CanMoveVertically verticMovingM = (CanMoveVertically) movable;
+			//verticMovingM.increaseVerticalSpeed(Math.random()*10-5);
+			((CanMoveVertically) movable).increaseVerticalSpeed(Math.random()*10-5);
+			
 		}
 	}
 	
