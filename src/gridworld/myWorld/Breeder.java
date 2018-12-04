@@ -12,7 +12,7 @@ import gridworld.myWorld.*;
 
 public class Breeder extends DBug{
 	
-	Breeder(){
+	public Breeder(){
 		super(Color.red);
 	}
 	
