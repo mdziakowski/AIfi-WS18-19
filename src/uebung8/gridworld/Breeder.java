@@ -1,4 +1,4 @@
-package uebung8;
+package uebung8.gridworld;
 
 import java.awt.Color;
 

@@ -1,4 +1,4 @@
-package uebung8;
+package uebung8.gridworld;
 
 import gridworld.framework.actor.ActorWorld;
 import gridworld.framework.actor.Rock;
