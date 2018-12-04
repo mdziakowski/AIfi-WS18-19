@@ -13,9 +13,12 @@ import gridworld.framework.grid.Location;
 public class BabyBug extends DBug {
 	int eatenFlowers = 0;
 	
-	BabyBug (Color bbugColor){
-		super(Color.yellow);
-		
+	public BabyBug (Color bbugColor){
+		super(bbugColor);
+	}
+	
+	public BabyBug(){
+		this(Color.yellow);
 	}
 	
 	 @Override
