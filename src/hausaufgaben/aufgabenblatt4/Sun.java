@@ -6,10 +6,12 @@ final class Sun extends GalaxyElement {
 	/////////////Konstruktoren
 	Sun (String str){
 		super(str);
+		size = 100;
 	}
 	
 	Sun ( String str , double x , double y , double size ) {
 		super(str, x, y, size);
+		this.size = size;
 	}
 	
 	

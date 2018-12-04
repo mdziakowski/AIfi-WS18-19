@@ -13,6 +13,7 @@ public final class Planet extends GalaxyElement implements Movable {
 	Planet (String str, Sun parentSun){
 		super(str);
 		this.parentSun = parentSun;
+		this.size = 10;
 	}
 	
 	Planet ( String str , double size, Sun parentSun ) {
@@ -26,6 +27,7 @@ public final class Planet extends GalaxyElement implements Movable {
 		this.distanceToSun = distanceToSun;
 		x = parentSun.getX() + distanceToSun;
 		y = parentSun.getY();
+		this.size = 10;
 		
 	}
 	
