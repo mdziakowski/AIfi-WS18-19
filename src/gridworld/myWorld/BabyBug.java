@@ -73,11 +73,6 @@ public class BabyBug extends DBug {
 	        else
 	            removeSelfFromGrid();
 	    }
-	 
-	 public void turn()
-	    {
-	        setDirection(getDirection() + Location.HALF_RIGHT);
-	    }
 	
 	
 //	public void removeFlower(){
