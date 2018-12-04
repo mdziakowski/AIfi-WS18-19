@@ -7,7 +7,7 @@ import gridworld.framework.actor.Bug;
 public class DBug extends Bug{
 	int zyklus=0;
 	
-	DBug (Color bugColor){
+	public DBug (Color bugColor){
 		this.setColor(bugColor);
 		
 	}
