@@ -1,6 +1,9 @@
 package uebung8;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import gridworld.framework.actor.Actor;
 import gridworld.framework.actor.Critter;
@@ -18,35 +21,42 @@ public class BabyBug extends Critter {
 	
 //	 @Override
      public void act()     {
-       	 countEatenFlowers();
-        	 move();
-        	 growUp();
-        	 turn();
+        	super.act();
+        	countEatenFlowers();
      }
 
 	public void countEatenFlowers() {
-		Grid<Actor> gr = getGrid();
-		if (gr != null) {
-		Location loc = getLocation();
-		Location next = loc.getAdjacentLocation(getDirection());
-		Actor neighbor = gr.get(next);
-		if (neighbor instanceof Flower) {
-			this.eatenFlowers++;
+		if (eatenFlowers >= 3) {
+			Location location = getLocation();
+			Grid grid = getGrid();
+			removeSelfFromGrid();
+			if (Math.random() <= 0.5) {
+				Breeder breeder = new Breeder ();
+				breeder.putSelfInGrid(grid, location);
+			} else {
+				DBug bug = new DBug (Color.blue);
+				bug.putSelfInGrid(grid, location);
+								
+			}
 		}
-     	}
 	}
 
-	public void growUp() {
-		if (eatenFlowers == 3) {
-			Grid<Actor> gr = getGrid();
-			if (gr != null) {
-			Location loc = getLocation();
-			Location next = loc.getAdjacentLocation(getDirection());
-			DBug dbugnew = new DBug(Color.black);
-			this.removeSelfFromGrid();
-			Breeder breeder = new Breeder();
-			breeder.putSelfInGrid(gr, loc);
+	@Override
+	public void processActors(ArrayList<Actor> actors) {
+		List<Flower> availableFlowers = new ArrayList<Flower>();
+		
+		System.out.println(actors.size());
+		
+		for (Actor actor: actors) {
+			if (actor instanceof Flower) {
+				availableFlowers.add((Flower) actor);
 			}
+		}
+		
+		if (!availableFlowers.isEmpty()) {
+			Collections.sort(availableFlowers, new FlowerComparator());
+			availableFlowers.get(0).removeSelfFromGrid();
+			eatenFlowers++;
 		}
 		
 	}
@@ -58,10 +68,11 @@ public class BabyBug extends Critter {
 	            return;
 	        Location loc = getLocation();
 	        Location next = loc.getAdjacentLocation(getDirection());
+	        countEatenFlowers();
 	        if (gr.isValid(next))
 	            moveTo(next);
 	        else
-	            removeSelfFromGrid();
+	            turn();
 	    }
 	 
 	 
