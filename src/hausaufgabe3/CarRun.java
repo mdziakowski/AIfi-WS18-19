@@ -10,15 +10,28 @@ public class CarRun {
         
 		//Autos und Staus in GridWorld (Hausaufgabe 3)
 		
+		/**
+		 * die Klasse ActorWorld hat noch einen zweiten Konstruktor,
+		 * mit diesem kann direkt ein Grid übergeben werden
+		 */
 		ActorWorld world = new ActorWorld();
         BoundedGrid grid = new BoundedGrid<>(10, 30);
         world.setGrid(grid);
         
         // Setzen der Produktionsfabriken für Autos in der kompletten ersten Spalte
+        
+        /**
+         * gute Verwendung der Schleife zum setzten der CarSource
+         * beim anpassen des grids muss aber auch deine Schleife angepasst werden,
+         * ohne wäre schöner
+         */
         for(int i=0; i<10;i++) {
 			world.add(new Location(i,0), new CarSource(0.6));
         }
         
+        /**
+         * gut das kein CarSource überschrieben wird
+         */ 
         //Zufällig mehrere Steine in die Welt legen
         	for (int i=1;i<10;i++) {
         		for (int j=1; j<30; j++) {
@@ -27,9 +40,14 @@ public class CarRun {
         			}
         		}
         	}
-        
+
         world.show();
 	}
+	
+	/**
+	 * funktioniert einwandfrei, ordentlicher Code und ganz gute Kommentierung
+	 */
+	
 		
 	//Basis-Welt (eine Autobahn)
 	

@@ -12,6 +12,10 @@ public class Car extends Actor{
 	// Attribute des Autos
 	private int speed;
 	
+	/**
+	 * Den Aufruf super() in den Konstruktoren brauchst du in diesem Fall nicht, 
+	 * wenn du diesen weglässt ergänzt ihn Java automatisch
+	 */
 	//Konstruktoren 
 	public Car() {
 		super();
@@ -46,7 +50,9 @@ public class Car extends Actor{
 			//System.out.println("new Location (row=" + newLocation.getRow() + " , col=" + newLocation.getCol() + ") is not valid! car will be removed!");
 			removeSelfFromGrid();
 		}
-		
+		/**
+		 * gute Abfrage mit dem Rückwärtsfahren
+		 */
 		//Trödeln oder Beschleunigen?
 		if (Math.random()<0.4 && speed > 0) {	// (&& speed > 0), damit das Auto nicht rückwärts fährt
 			speed = speed -1;

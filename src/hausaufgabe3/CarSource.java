@@ -10,6 +10,10 @@ public class CarSource extends Actor {
 	//Attribute der Produktionsfabrik
 	private double prob = 0.5;
 	
+	/**
+	 * Den Aufruf super() in den Konstruktoren brauchst du in diesem Fall nicht, 
+	 * wenn du diesen weglässt ergänzt ihn Java automatisch
+	 */
 	//Konstruktoren
 	CarSource(){
 		super();
