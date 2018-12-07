@@ -9,6 +9,7 @@ public class CarSource extends Actor {
 		if (Math.random() < 0.1) {
 			Grid<Actor> gr = getGrid();
 			Location loc = getLocation();
+			// guter Weg um die Nachberposition zu bestimmen
 			Location next = loc.getAdjacentLocation(90);
         	Actor neighbor = gr.get(next);
         	if (neighbor == null) {

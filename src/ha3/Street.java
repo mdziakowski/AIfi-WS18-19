@@ -2,6 +2,7 @@ package ha3;
 
 import gridworld.framework.actor.Actor;
 import gridworld.framework.actor.ActorWorld;
+import gridworld.framework.actor.Bug;
 import gridworld.framework.actor.Rock;
 import gridworld.framework.grid.BoundedGrid;
 import gridworld.framework.grid.Location;
@@ -27,3 +28,6 @@ public class Street {
 	}
 
 }
+
+
+//funktioniert einwandfrei, sehr gute Verwendung der Schleife zum hinzufügen der CarSource auch relativ ordentlicher Code
