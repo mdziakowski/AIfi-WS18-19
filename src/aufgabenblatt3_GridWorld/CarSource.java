@@ -52,3 +52,5 @@ public class CarSource extends Actor {
         return (neighbor == null) || (neighbor instanceof Flower);
     }
 }
+
+// die Konstruktoren sind schön, nur benutzt du diese gar nicht

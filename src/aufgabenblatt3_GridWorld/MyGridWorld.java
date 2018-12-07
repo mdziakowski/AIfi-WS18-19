@@ -32,3 +32,5 @@ class MyGridWorld {
 	}
 
 }
+
+// funktioniert einwandfrei, sehr gute Verwendung der Schleife zum hinzufügen der CarSource und ordentlichen Code

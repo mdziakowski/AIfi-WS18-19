@@ -88,3 +88,4 @@ class Car extends Actor{
     }
 }
 
+// da dein speed negativ werden kann, können die Autos vor allem in der untersten Reihe sehr lange stehen beliben, nur so falls es nicht gewollt war
