@@ -3,6 +3,7 @@ import gridworld.framework.actor.* ;
 import gridworld.framework.grid.* ;
 
 
+
 class MyGridWorld {
 
 	public static void main(String[] args) {
@@ -10,8 +11,7 @@ class MyGridWorld {
 		// Set up Grid
 		int num_row = 10; // Number of Lanes
 		ActorWorld world = new ActorWorld(new BoundedGrid<Actor>(num_row, 50)) ;
-		
-		
+			
 		for (int i = 0 ; i <num_row ; i++) {
 			// *** Question 1.5 : ***
 			// *** Inputs for Car: new Car(Initial Speed, Probability of Slowing down ***
@@ -33,4 +33,6 @@ class MyGridWorld {
 
 }
 
-// funktioniert einwandfrei, sehr gute Verwendung der Schleife zum hinzufügen der CarSource und ordentlichen Code
+// funktioniert einwandfrei, sehr gute Verwendung der Schleife zum hinzufügen der CarSource(vor allem mit dem i < num_row, somit muss nur eins angepasst werden) 
+// man kommt auch von der world auf die Anzahl der rows, somit muss num_row an sich nicht benutzt werden world.getGrid().getNumRows()
+// und ordentlichen Code
