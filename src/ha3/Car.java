@@ -49,3 +49,5 @@ public class Car extends Actor {
     }
 
 }
+
+// du machst die canMove()-Abfrage, bei dir auch in der move()-Methode, eine Trennung wäre schöner gewesen
