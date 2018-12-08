@@ -1,7 +1,7 @@
 package uebung8;
 
 import gridworld.framework.actor.ActorWorld;
-import uebung5.Breeder;
+import uebung8.gridworld.Breeder;
 
 class PredatorMain {
 
