@@ -7,7 +7,6 @@ public final class Planet extends GalaxyElement implements Movable {
 	final double ROTATION = Math.PI / 4;
 	private double anomalie = 0;
 	
-	
 	//////////////////Konstruktoren
 	
 	Planet (String str, Sun parentSun){

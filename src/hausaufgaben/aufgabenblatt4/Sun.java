@@ -14,11 +14,7 @@ final class Sun extends GalaxyElement {
 		this.size = size;
 	}
 	
-	
-	
-	
-	
-	
+
 	/////////////Methoden
 	
 	@Override

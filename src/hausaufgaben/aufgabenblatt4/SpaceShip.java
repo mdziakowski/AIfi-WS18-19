@@ -9,7 +9,6 @@ final public class SpaceShip extends GalaxyElement implements Movable, Destroyab
 	private double energy = 100;
 	private double size = 1;
 	
-	
 	SpaceShip(String str){
 		super(str);
 	}
