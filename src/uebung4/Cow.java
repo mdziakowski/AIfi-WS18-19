@@ -19,4 +19,16 @@ public class Cow {
 		return cowCounter;
 	}
 
+	public boolean isHungry() {
+		return this.hungry;
+	}
+	
+	public void toogleHungry() {
+		this.hungry = !this.hungry;
+	}
+	
+	public Calf giveBirth(String name) {
+		return new Calf(name, this);
+	}
+
 }

@@ -1,4 +1,4 @@
-package hausaufgaben;
+package hausaufgaben.aufgabenblatt_1;
 
 public class Aufgabe1 {
 	public static void main(String[] args) {

@@ -18,8 +18,10 @@ public class Farm {
 		farmer.feedCow(cow1);
 		System.out.println(cow1.getName() + " Hunger: " + cow1.isHungry());
 		
-		Calf calf = cow1.giveBrith("Johnny");
-		System.out.println(calf.getName());
+		Calf calf = cow1.giveBirth("Johnny");
+		System.out.println(calf.getName() + " wurde geboren");
+		
+		System.out.println("Anzahl der Cows: " + Cow.getCowCount());
 		
 	}
 
