@@ -9,7 +9,7 @@ import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
 
 public class Breeder extends Bug{
-	Breeder() {}
+	public Breeder() {}
 	
 	
 	

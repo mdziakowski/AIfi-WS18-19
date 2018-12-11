@@ -7,6 +7,7 @@ import gridworld.framework.actor.Bug;
 import gridworld.framework.actor.Flower;
 import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
+import uebung5.gridworld.DisposableBug;
 
 public class BBug extends Bug {
 	int zahler = 0;
@@ -35,7 +36,7 @@ public class BBug extends Bug {
         if (zahler >= 3) {
         	if (Math.random() >= 0.5) {
         		this.removeSelfFromGrid();
-        		DBug peter = new DBug(Color.BLUE);
+        		DisposableBug peter = new DisposableBug();
         		peter.putSelfInGrid(gr, loc);
         	}
         	else {
