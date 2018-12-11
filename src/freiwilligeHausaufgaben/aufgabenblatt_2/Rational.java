@@ -1,4 +1,4 @@
-package hausaufgaben.aufgabenblatt_2;
+package freiwilligeHausaufgaben.aufgabenblatt_2;
 
 public class Rational {
 	
