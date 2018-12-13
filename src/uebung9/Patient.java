@@ -3,12 +3,12 @@ package uebung9;
 class Patient extends Mensch {
 	private int versicherungsnummer;
 	
-	Patient (String name, int T, int M, int Y, int versicherungsnummer){
-		super(name, T, M, Y);
+	Patient (String name, int geb, int versicherungsnummer){
+		super(name, geb);
 		this.versicherungsnummer = versicherungsnummer;
 	}
 	
-	double getVersicherungsnummer(){
+	int getVersicherungsnummer(){
 		return (this.versicherungsnummer);
 	}
 

@@ -3,13 +3,11 @@ package uebung9;
 class Mensch implements Comparable<Mensch> {
 	
 	private String name;
-	private Geburtsdatum geburtsdatum;
+	private int geburtsdatum;
 	
-	Mensch (String name, int T, int M, int Y){
-		name = this.name;
-		geburtsdatum.setTag(T);
-		geburtsdatum.setMonat(M);
-		geburtsdatum.setJahr(Y);
+	Mensch (String name, int geburtsdatum){
+		this.name = name;
+		this.geburtsdatum = geburtsdatum;
 	}
 	
 	
@@ -28,18 +26,17 @@ class Mensch implements Comparable<Mensch> {
 		return (this.name);
 	}
 	
-	String getGeburtsdatum(){
-		return (this.geburtsdatum.Tag + "." + this.geburtsdatum.Monat + "." + this.geburtsdatum.Jahr);
+	int getGeburtsdatum(){
+		return (this.geburtsdatum);
 	}
 	
 	void setName(String name){
 		this.name = name;
 	}
 	
-	void setGeburtsdatum(int Tag, int Monat, int Jahr){
-		this.geburtsdatum.Tag = Tag;
-		this.geburtsdatum.Monat = Monat;
-		this.geburtsdatum.Jahr = Jahr;
+	void setGeburtsdatum(int geb){
+		this.geburtsdatum = geb;
+		
 	}
 	
 	boolean equals(Mensch mensch) {

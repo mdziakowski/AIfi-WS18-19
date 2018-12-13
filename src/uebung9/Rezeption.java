@@ -9,15 +9,16 @@ class Rezeption {
 	Queue<Patient> warteSchlange = new LinkedList<>();
 	Set<Patient> datei = new TreeSet<>();
 	
-	void aufnahmePatient (Patient aktPat, TreeSet<Patient> datei){
+	
+	void aufnahmePatient (Patient aktPat){
 		warteSchlange.offer(aktPat);
-		if (!datei.contains(aktPat)){
-			datei.add(aktPat);
+		if (!this.datei.contains(aktPat)){
+			this.datei.add(aktPat);
 		}
 		
 	}
 	
-	void patientZuArzt (Patient aktPat, TreeSet<Patient> datei, Doktor doc){
+	void patientZuArzt (Patient aktPat, Doktor doc){
 		warteSchlange.remove(aktPat);
 		doc.zahleGehalt();
 		
