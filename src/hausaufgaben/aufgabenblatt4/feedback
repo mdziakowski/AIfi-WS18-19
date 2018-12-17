@@ -13,3 +13,82 @@
 		
 der break Befehl springt nur aus der innersten Sschleife raus, 
 das Pragramm springt dann wieder in Zeile eins und führt dann dem nächsten Schritt aus, der wieder deine zweite Schleife aufruft
+
+
+@Override
+	public int compare(GalaxyElement e1, GalaxyElement e2) {
+		//int SizeCompare = e1.getSize().compareToSize(e2.getSize()); ----> Wie kann ich hier die Größe vergleichen? Klappt leider nicht
+		int SizeCompare = 1;
+		int NameCompare = e1.getName().compareTo(e2.getName());
+		
+		
+		if (NameCompare == 0) {
+			return ((SizeCompare == 0) ? NameCompare : SizeCompare);
+		} else {
+			return (NameCompare);
+		}
+		
+	}
+
+Du brauchst ein Objekt vom Typ Double um die Methode compareTo() nutzen zu können
+
+		Double size1 = new Double(e1.getSize());
+		Double size2 = new Double(e2.getSize());
+		int SizeCompare = size1.compareTo(size2);
+
+		
+Eine kleine Sache zu den Konstruktoren: 		
+
+
+	protected double x = 0;
+	protected double y = 0;
+	protected double size = 1;
+	protected String name;
+			
+	GalaxyElement ( String str ){
+		name=str;		
+	}
+	
+	GalaxyElement ( String str , double x , double y , double size ) {
+		this ( str );
+		this.x = x;
+		this.y = y;
+		this.size = size;
+	}
+	
+so wäre es schöner, in diesem Fall ist es egal, aber in vielen anderen Fällen ist das so rum kürzer:
+
+	protected double x;
+	protected double y ;
+	protected double size;
+	protected String name;
+	
+	GalaxyElement ( String str ){
+		this(str, 0, 0, 1);	
+	}
+	
+	GalaxyElement ( String str , double x , double y , double size ) {
+		this.name = str;
+		this.x = x;
+		this.y = y;
+		this.size = size;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
