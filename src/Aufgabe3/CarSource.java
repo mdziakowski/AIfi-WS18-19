@@ -20,6 +20,7 @@ public class CarSource extends Bug{
 		 Location loc = getLocation();
 		 if (Math.random()<this.possibility) {
 		 Location next = loc.getAdjacentLocation(90);
+		 // wenn das Feld gerade belegt ist wird es einfach überschrieben
 		 Car car = new Car(5);
 		 car.putSelfInGrid(gr, next);
 		 }

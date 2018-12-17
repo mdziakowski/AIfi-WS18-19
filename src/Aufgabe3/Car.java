@@ -7,6 +7,9 @@ import gridworld.framework.actor.Rock;
 import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
 
+
+//irgendwo ist hier noch ein Fehler, da ab und zu cars rocks überschreiben, habe den Fehler leider noch nicht gefunden
+
 public class Car extends Bug{
 	
 	private double speed;
@@ -36,7 +39,7 @@ public class Car extends Bug{
 	public void act() {
 		// TODO Auto-generated method stub
 		this.realSpeed();
-		
+		// if (canMove() && !ifSlowDown()) {
 		if (canMove() && ifSlowDown() == false) {
 			 move();
 			speedUp(); 

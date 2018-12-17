@@ -14,6 +14,10 @@ public class CarRun {
 		
         ActorWorld world = new ActorWorld(gr);
         
+//        for (int i = 0; i < gr.getNumRows(); i++ ) {
+//        	world.add(new Location(i, 0), new CarSource(0.4));
+//        }
+        
         CarSource c0 = new CarSource(0.4); world.add(new Location (0,0), c0);
         CarSource c1 = new CarSource(0.4); world.add(new Location (1,0), c1);
         CarSource c2 = new CarSource(0.4); world.add(new Location (2,0), c2);
