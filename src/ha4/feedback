@@ -1,0 +1,41 @@
+deine access modifier sind immer default, besser wäre es wenn die so klein wie möglich sind
+
+in der Klasse Planet sollte die Variable double angleMove = Math.PI/4; eine Konstatnte sein(geht mit final)
+
+sonst sehr gut
+
+Eine kleine Sache zu den Konstruktoren: 		
+	
+	double x = 0;
+	double y = 0;
+	double size = 100;
+	String name;
+	
+	GalaxyElement(String name) {
+		this.name = name;
+	}
+	
+	GalaxyElement(double x, double y, double size, String name) {
+		this.x = x;
+		this.y = y;
+		this.size = size;
+		this.name = name;
+	}
+	
+so wäre es schöner, in diesem Fall ist es egal, aber in vielen anderen Fällen ist das so rum kürzer:
+
+	double x;
+	double y ;
+	double size;
+	String name;
+	
+	GalaxyElement ( String name ){
+		this(name, 0, 0, 100);	
+	}
+	
+	GalaxyElement ( String name , double x , double y , double size ) {
+		this.name = name;
+		this.x = x;
+		this.y = y;
+		this.size = size;
+	}
