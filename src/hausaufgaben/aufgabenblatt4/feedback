@@ -1,0 +1,15 @@
+		for (int i = 1 ; i < 10 ; i++) {
+			for (GalaxyElement element : galaxy.values()) {
+				if (element instanceof Destroyable) {
+					((Destroyable) element).hit(Math.random()*25);
+					System.out.println(((SpaceShip) element).getEnergy());
+					if (((Destroyable) element).isDestroyed()) {
+						System.out.println("Lösche aus Liste");
+						break; // Wieso kann ich mit break die Schleife nicht verlassen?
+					}
+				}
+			}
+		}
+		
+der break Befehl springt nur aus der innersten Sschleife raus, 
+das Pragramm springt dann wieder in Zeile eins und führt dann dem nächsten Schritt aus, der wieder deine zweite Schleife aufruft
