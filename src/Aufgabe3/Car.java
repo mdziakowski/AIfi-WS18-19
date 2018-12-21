@@ -8,7 +8,8 @@ import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
 
 
-//irgendwo ist hier noch ein Fehler, da ab und zu cars rocks überschreiben, habe den Fehler leider noch nicht gefunden
+//du überprüfst die Felder auf der gleichen Reihe, in deiner move Methode, aber kann auch die Spur gewechselt werden und dort überprüfst du nicht ob das Feld schon belegt ist
+//sondern überschreibst es einfach und auch imer wenn du deine Methode nextLocation aufrufst, besteht die Wahrscheinlichkeit, dass diese ein anderes Ergebins zurückgibt 
 
 public class Car extends Bug{
 	
@@ -44,6 +45,7 @@ public class Car extends Bug{
 			 move();
 			speedUp(); 
 			}
+		// else if (canMove() && ifSlowDown()) {
 		else if(canMove() && ifSlowDown() == true) {
 			this.slowDown();
 			move();
