@@ -1,4 +1,4 @@
-package vorlesung10;
+package vorlesung11;
 
 class Test {
 
