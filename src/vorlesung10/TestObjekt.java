@@ -42,6 +42,10 @@ public class TestObjekt implements Comparable<TestObjekt> {
 	public int getId() {
 		return id;
 	}
+	
+	public String toString() {
+		return("ID: " + this.getId() + " A: " + this.getA() + " B: " + this.getB() + " C: " + this.getC());
+	}
 
 	
 }
