@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<persons>
+	<person id="23">
+		<name>Müller</name>
+		<vorname>Nina</vorname>
+		<alter>24</alter>
+	</person>
+	<person id="42">
+		<name>Maier</name>
+		<vorname>Hans</vorname>
+		<alter>23</alter>
+	</person>
+</persons>
