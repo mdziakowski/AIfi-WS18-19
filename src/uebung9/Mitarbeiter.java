@@ -1,8 +1,10 @@
 package uebung9;
 
-interface Mitarbeiter {
+public interface Mitarbeiter {
+
+	final int gehalt = 50000;
 	
-	final static double GEHALT = 100;
+	public void gehaltZahlen();
+	public int gezahltesGehalt();
 	
-	void zahleGehalt();
 }

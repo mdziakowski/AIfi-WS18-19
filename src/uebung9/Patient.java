@@ -1,11 +1,16 @@
 package uebung9;
 
-class Patient extends Mensch {
-
-	int verNummer;
+public class Patient extends Mensch {	
 	
-	Patient(String name, String bDay, int verNummer) {
-		super(name, bDay);
-		this.verNummer = verNummer;
+	private int versicherngsNummer;
+	
+	public Patient(String name, int geburtsdatum, int versicherngsNummer) {
+		super(name, geburtsdatum);
+		this.versicherngsNummer = versicherngsNummer;
 	}
+	
+	public int getVersicherungsNummer() {
+		return versicherngsNummer;
+	}
+	
 }

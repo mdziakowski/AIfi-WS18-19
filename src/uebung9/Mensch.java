@@ -1,43 +1,49 @@
 package uebung9;
 
-
-class Mensch implements Comparable<String> {
+public class Mensch implements Comparable<Mensch> {
 	
-	String name;
-	String bDay;
+	private String name;
+	private int geburtsdatum;
+	private Doktor behandelnderArzt;
 	
-	Mensch(String name, String bDay) {
+	public Mensch(String name, int geburtsdatum) {
 		this.name = name;
-		this.bDay = bDay;
+		this.geburtsdatum = geburtsdatum;
 	}
 
-	@Override
-	public int compareTo(String name) {
-		if (this.name.charAt(0) > name.charAt(0)) {
-			return 1;
-		}
-		else if (this.name == name) {
-			return 0;
-		}
-		else {
-			return -1;
-		}
+	public String toString(){
+		return name + ", " + geburtsdatum;
 	}
 
-	String getName() {
+	public String getName() {
 		return name;
 	}
 
-	void setName(String name) {
-		this.name = name;
+	public int getGeburtsdatum() {
+		return geburtsdatum;
 	}
-
-	String getbDay() {
-		return bDay;
+	
+	public void setBehandelnderArzt(Doktor behandelnderArzt) {
+		this.behandelnderArzt = behandelnderArzt;
 	}
-
-	void setbDay(String bDay) {
-		this.bDay = bDay;
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this.getGeburtsdatum() == ((Mensch) obj).getGeburtsdatum() && this.getName().equals(((Mensch) obj).getName())) {
+			return true;
+		}
+		return false;
 	}
-
+	
+	@Override
+	public int compareTo(Mensch o) {
+		if (this.getGeburtsdatum() > o.getGeburtsdatum()) {
+			return 1;
+		} else if (this.getGeburtsdatum() == o.getGeburtsdatum() && this.getName().equals(o.getName())) {
+			return 0;
+		} else {
+			return -1;
+		}
+		
+	}
 }

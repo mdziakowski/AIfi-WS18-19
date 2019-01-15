@@ -1,16 +1,28 @@
 package uebung9;
 
-class Doktor extends Mensch implements Mitarbeiter {
+public class Doktor extends Mensch implements Mitarbeiter {
 
-	double geld = 0;
+	int behandeltePatienten = 0;
+	int erhaltensGehalt = 0;
 	
-	Doktor(String name, String bDay) {
-		super(name, bDay);
+	public Doktor(String name, int geburtsdatum) {
+		super(name, geburtsdatum);
+	}
+
+	public void patientBehandelt() {
+		behandeltePatienten++;
+	}
+	
+	@Override
+	public void gehaltZahlen() {
+		erhaltensGehalt = behandeltePatienten * gehalt;	
 	}
 
 	@Override
-	public void zahleGehalt() {
-		geld += GEHALT;
+	public int gezahltesGehalt() {
+		return erhaltensGehalt;
 	}
+
+	
 	
 }
