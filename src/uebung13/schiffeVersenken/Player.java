@@ -17,7 +17,7 @@ public class Player {
 	}
 	
 	public void addSchiff(int schiff) {
-		System.out.println("Welche Richtung für das Schiff(s für senkrecht oder w für waagerecht), das Schiff hat eine Länge von " + schiff + ":");
+		System.out.println("Welche Richtung für das Schiff(s für senkrecht oder w fuer waagerecht), das Schiff hat eine Laenge von " + schiff + ":");
 		String richtung = scanner.next();
 		if (richtung.equals("s")) {
 			richtung = "senkrecht";
@@ -28,7 +28,7 @@ public class Player {
 			addSchiff(schiff);
 			return;
 		}
-		System.out.println("Wohin(das Schiff hat eine Länge von " + schiff + ") und steht " + richtung + ":\nx-Koordinate: ");
+		System.out.println("Wohin(das Schiff hat eine Laenge von " + schiff + ") und steht " + richtung + ":\nx-Koordinate: ");
 		int x = scanner.nextInt();
 		System.out.println("y-Koordinate: ");
 		int y = scanner.nextInt();
@@ -53,7 +53,7 @@ public class Player {
 				spielfeld[x + i][y] = "O";
 			}
 		} else {
-			System.out.println("Ungültige Eingabe.");
+			System.out.println("Ungueltige Eingabe.");
 			addSchiff(schiff);
 		}
 		showWorld();
@@ -78,7 +78,7 @@ public class Player {
 			}
 			letzterSchuss = "Schuss von " + name + " : " + x + ", " + y;
 		} else {
-			System.out.println("Ungültige Eingabe");
+			System.out.println("Ungueltige Eingabe");
 			schuss();
 		}
 		
