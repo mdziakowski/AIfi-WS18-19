@@ -2,7 +2,6 @@ package ha3;
 
 import gridworld.framework.actor.Actor;
 import gridworld.framework.actor.ActorWorld;
-import gridworld.framework.actor.Bug;
 import gridworld.framework.actor.Rock;
 import gridworld.framework.grid.BoundedGrid;
 import gridworld.framework.grid.Location;
