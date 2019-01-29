@@ -1,8 +1,5 @@
 package vl.objectHierarchiesAbc;
 
-public interface AgentI{
+public interface AgentI extends Identifiable, Moveable{
 
-	String getId() ;
-
-	void move();
 }
