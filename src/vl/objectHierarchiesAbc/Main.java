@@ -11,14 +11,23 @@ class Main{
 
 		{
 			Child child = new Child( "Alfred") ;
+
+			child.setSchool( "Abc-Gymnasium" );
+
 			agents.add( child ) ;
 
 			aMethod(child) ;
 		}
 
 		for( AgentI agent : agents ){
+
 			agent.move() ;
+
 			aMethod( agent ) ;
+
+			if ( agent instanceof HasSchool ) {
+				System.out.println( ((HasSchool) agent).getSchool() ) ;
+			}
 		}
 
 	}
