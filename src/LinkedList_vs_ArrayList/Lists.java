@@ -12,7 +12,7 @@ public class Lists {
 		List<String> arrayList = new ArrayList<>();
 		List<String> linkedList = new LinkedList<>();
 
-		int n = 5000000;
+		int n = 100000;
 		
 		System.out.println("ArrayList");
 		long lastTimeMillis = System.currentTimeMillis();

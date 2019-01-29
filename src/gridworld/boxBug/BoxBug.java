@@ -50,8 +50,8 @@ public class BoxBug extends Bug
         }
         else
         {
-            turn();
-            turn();
+            //turn();
+            //turn();
             steps = 0;
         }
     }

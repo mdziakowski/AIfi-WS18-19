@@ -53,16 +53,22 @@ public class Bug extends Actor
         if (canMove())
             move();
         else
-            turn();
+            turn_left();
     }
 
     /**
      * Turns the bug 45 degrees to the right without changing its location.
      */
-    public void turn()
+    public void turn_right()
     {
         setDirection(getDirection() + Location.HALF_RIGHT);
     }
+    
+    public void turn_left()
+    {
+        setDirection(getDirection() + Location.HALF_LEFT);
+    }
+
 
     /**
      * Moves the bug forward, putting a flower into the location it previously

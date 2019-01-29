@@ -20,9 +20,16 @@ public class Galaxy {
 
 		System.out.println("X: " + planet1.x + " Y: " + planet1.y);
 
-		// planet1.move();
+		planet1.move();
+		planet1.move();
+		planet1.move();
+		planet1.move();
+		planet1.move();
+		planet1.move();
+		planet1.move();
+		planet1.move();
 
-		// System.out.println("X: " + planet1.x + " Y: " + planet1.y);
+		System.out.println("X: " + planet1.x + " Y: " + planet1.y);
 
 	}
 
